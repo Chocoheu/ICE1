@@ -9,7 +9,8 @@ package cardtrickice1;
  * step 2: take any card input from user suit,number
  * step 3: user card is in  the array 'card is found'
  *
- * @author sivagamasrinivasan,May 23rd
+ * @author sivagamasrinivasan
+ * Minh Ha Pham
  */
 public class CardTrickICE1 {
 

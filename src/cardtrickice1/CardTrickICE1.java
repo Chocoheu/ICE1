@@ -10,9 +10,13 @@ package cardtrickice1;
  * step 3: user card is in  the array 'card is found'
  *
  * @author sivagamasrinivasan
- * Minh Ha Pham
+ * Minh Ha Pham 991647919
  */
-public class CardTrickICE1 {
+
+import java.util.Random;
+import java.util.Scanner;
+public class CardTrickICE1 
+{
 
     /**
      * @param args the command line arguments
@@ -20,15 +24,37 @@ public class CardTrickICE1 {
     public static void main(String[] args) 
     {
         Card[] magicHand = new Card[7]; //Array of object
+        
+        Random random = new Random();	
+	int x;
+        
+        Card c1 = new Card();
+        
         for( int i=0;i<magicHand.length;i++)
         {
-            Card c1 = new Card();
-            c1.setValue(2);//use a method to generate random *13
-            c1.setSuits("hearts");//random method suit 
+            x = random.nextInt(13)+1;
+            c1.setValue(x);//use a method to generate random *13
+            c1.setSuits(Card.SUITS[new Random().nextInt(Card.SUITS.length)]);//random method suit 
+            System.out.print(x + " of ");
+            System.out.println( Card.SUITS[new Random().nextInt(Card.SUITS.length)]);
         }
         //step 2:take input 
+        System.out.println("Please choose the suit: \n 1: Hearts \n 2: Diamonds \n 3: Spades \n 4: Clubs");
+        Scanner kb = new Scanner(System.in);
+        int cardSuit = kb.nextInt();
+        System.out.println("Please choose the value (1 to 13)");
+        int cardNumber = kb.nextInt();
         
         //step 3: match with array 
+//        int value = c1.getValue();
+//        String suits = c1.getSuits();
+        
+        if(c1.getValue() == cardNumber)
+        {
+            System.out.println("Match.");
+        }else
+        {
+            System.out.println("Sorry, no match.");
+        }
     }
-    
 }

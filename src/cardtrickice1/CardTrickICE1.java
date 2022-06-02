@@ -23,6 +23,7 @@ public class CardTrickICE1
      */
     public static void main(String[] args) 
     {
+	Card luckyCard = new Card(7, "Hearts");
         Card[] magicHand = new Card[7]; //Array of object
         
         Random random = new Random();	

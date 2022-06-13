@@ -14,38 +14,42 @@ public class Card
 {
     private int value;
     private String suits; //encapsulation
-    //constant
+    
+    // Create an array of possible suits
     public static final String [] SUITS = { "diamonds","clubs","spades","hearts"};
 
     /**
      * @return the value
      */
-    public int getValue() {
+    public int getValue() 
+    {
         return value;
     }
 
     /**
      * @param value the value to set
      */
-    public void setValue(int value) {
+    public void setValue(int value) 
+    {
         this.value = value;
     }
 
     /**
      * @return the suits
      */
-    public String getSuits() {
+    public String getSuits() 
+    {
         return suits;
     }
 
     /**
      * @param suits the suits to set
      */
-    public void setSuits(String suits) {
+    public void setSuits(String suits) 
+    {
         this.suits = suits;
     }
    //number
     
     //method for suits
-    
 }
